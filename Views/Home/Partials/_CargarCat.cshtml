@@ -1,0 +1,8 @@
+@model Product
+
+<ul class="list-group">
+    @foreach (Association cat in Model.Productos)
+    {
+        <li class="list-group-item">@cat.Category.Name</li>
+    }
+</ul>

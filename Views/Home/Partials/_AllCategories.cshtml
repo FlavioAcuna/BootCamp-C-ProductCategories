@@ -1,0 +1,11 @@
+<div class="col">
+    <h2 class="text-center">Lista Categorias</h2>
+    <ul class="list-group">
+        @foreach (var producto in ViewBag.ListCat)
+        {
+            <li class="list-group-item">
+                <a asp-action="OneCat" asp-controller="Home" asp-route-CatId="@producto.CategoryId">@producto.Name</a>
+            </li>
+        }
+    </ul>
+</div>

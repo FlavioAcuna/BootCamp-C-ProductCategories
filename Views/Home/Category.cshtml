@@ -1,0 +1,20 @@
+@model CategoryViewModel
+<div class="container">
+    <div class="row">
+        @await Html.PartialAsync("Partials/_Menu")
+    </div>
+    <div class="row text-center">
+        <h3>@ViewBag.ListCat.Name</h3>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h4>Productos</h4>
+            @await Html.PartialAsync("Partials/_CargarProd", Model.categoriass)
+        </div>
+        <div class="col">
+            <h4>Añadir Categoria</h4>
+            @await Html.PartialAsync("Partials/_AddProdCat", Model.newAssociation)
+        </div>
+    </div>
+</div>
+

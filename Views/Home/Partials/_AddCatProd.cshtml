@@ -1,0 +1,12 @@
+@model Association
+<form asp-action="AddCatonProd" asp-controller="Home" method="post" asp-route-ProdId="@ViewBag.ListProd.ProductId">
+    <select asp-for="CategoryId" class="form-select">
+        @foreach (var item in ViewBag.LisCat)
+        {
+            <option value="@item.CategoryId">@item.Name</option>
+        }
+    </select>
+    <span asp-validation-for="CategoryId"></span>
+    <br>
+    <button type="submit" class="btn btn-primary my-3">Agregar</button>
+</form>
